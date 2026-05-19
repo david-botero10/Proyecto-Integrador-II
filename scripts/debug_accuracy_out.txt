@@ -1,0 +1,48 @@
+﻿python : WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+En C:\Users\davbo\AppData\Local\Temp\ps-script-b7efdfb3-60ab-4d08-8b53-bb5bfeba95ab.ps1: 92 Carácter: 101
++ ... ntegrador II"; python scripts\debug_notebook_accuracy.py 2>&1 | Out-F ...
++                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (WARNING: All lo...itten to STDERR:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+I0000 00:00:1779154809.390912   18024 port.cc:153] oneDNN custom operations are on. You may see slightly different 
+numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+C:\Users\davbo\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\__init__.py:113: 
+RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.4.0.post2)/charset_normalizer (3.4.4) doesn't match a 
+supported version!
+  warnings.warn(
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1779154813.157058   18024 port.cc:153] oneDNN custom operations are on. You may see slightly different 
+numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1779154815.647694   18024 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available 
+CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX_VNNI FMA, in other operations, rebuild 
+TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From 
+C:\Users\davbo\AppData\Local\Programs\Python\Python310\lib\site-packages\keras\src\backend\tensorflow\core.py:232: The 
+name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if 
+CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+Loading C:\Users\davbo\Documents\Maestria en Ciencias de los Datos y Analitica\Proyecto Integrador II\worker\models\captcha_model.keras
+Traceback (most recent call last):
+  File "C:\Users\davbo\Documents\Maestria en Ciencias de los Datos y Analitica\Proyecto Integrador 
+II\scripts\debug_notebook_accuracy.py", line 121, in <module>
+    main()
+  File "C:\Users\davbo\Documents\Maestria en Ciencias de los Datos y Analitica\Proyecto Integrador 
+II\scripts\debug_notebook_accuracy.py", line 96, in main
+    pred_model = keras.models.Model(
+  File "C:\Users\davbo\AppData\Local\Programs\Python\Python310\lib\site-packages\keras\src\utils\tracking.py", line 
+26, in wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\davbo\AppData\Local\Programs\Python\Python310\lib\site-packages\keras\src\models\functional.py", line 
+136, in __init__
+    Function.__init__(self, inputs, outputs, name=name)
+  File "C:\Users\davbo\AppData\Local\Programs\Python\Python310\lib\site-packages\keras\src\ops\function.py", line 63, 
+in __init__
+    raise ValueError(
+ValueError: `inputs` argument cannot be empty. Received:
+inputs=[]
+outputs=<KerasTensor shape=(None, 70, 58), dtype=float32, sparse=False, ragged=False, name=keras_tensor_23>

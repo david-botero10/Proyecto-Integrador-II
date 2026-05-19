@@ -1,0 +1,30 @@
+# Floci persistencia local
+floci-data/
+
+# Entorno
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Datos y modelos
+data/
+*.xlsx
+models/*.pt
+models/*.h5
+models/*.onnx
+
+# Dataset grande del notebook (mantener notebook y .keras en repo si aplica)
+Modelo/Imagenes*/
+Modelo/**/*.png
+Modelo/**/*.jpg
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Docker
+*.log

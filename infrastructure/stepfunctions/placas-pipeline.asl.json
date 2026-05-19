@@ -1,0 +1,47 @@
+{
+  "Comment": "Pipeline: validar job -> particionar Excel -> encolar placas -> esperar procesamiento",
+  "StartAt": "SplitExcel",
+  "States": {
+    "SplitExcel": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "placas-split-excel",
+        "Payload": {
+          "job_id.$": "$.job_id",
+          "s3_key.$": "$.s3_key"
+        }
+      },
+      "ResultPath": "$.splitResult",
+      "Next": "WaitForWorkers"
+    },
+    "WaitForWorkers": {
+      "Type": "Wait",
+      "Seconds": 30,
+      "Comment": "En producción: reemplazar por poll DynamoDB o métrica SQS ApproximateNumberOfMessages",
+      "Next": "MarkCompleted"
+    },
+    "MarkCompleted": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::dynamodb:updateItem",
+      "Parameters": {
+        "TableName": "placas-jobs",
+        "Key": {
+          "job_id": {
+            "S.$": "$.job_id"
+          }
+        },
+        "UpdateExpression": "SET #s = :completed",
+        "ExpressionAttributeNames": {
+          "#s": "status"
+        },
+        "ExpressionAttributeValues": {
+          ":completed": {
+            "S": "COMPLETED"
+          }
+        }
+      },
+      "End": true
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "accuracy": 0.877,
+  "accuracy_pct": 87.7,
+  "validation_samples": 346,
+  "train_split": "90/10",
+  "dataset_images": 3457,
+  "note": "Acierto exacto de secuencia completa en conjunto de validación (Modelo Experimental.ipynb)"
+}

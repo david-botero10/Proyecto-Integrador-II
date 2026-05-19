@@ -1,0 +1,32 @@
+﻿python : WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+En C:\Users\davbo\AppData\Local\Temp\ps-script-d84588cd-e0b6-41e5-9522-784a1f2f435e.ps1: 92 Carácter: 101
++ ... iencias de los Datos y Analitica\Proyecto Integrador II"; python -c "
++                                                               ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (WARNING: All lo...itten to STDERR:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+I0000 00:00:1779154831.038209    7800 port.cc:153] oneDNN custom operations are on. You may see slightly different 
+numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+C:\Users\davbo\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\__init__.py:113: 
+RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.4.0.post2)/charset_normalizer (3.4.4) doesn't match a 
+supported version!
+  warnings.warn(
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1779154834.353751    7800 port.cc:153] oneDNN custom operations are on. You may see slightly different 
+numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1779154836.596711    7800 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available 
+CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX_VNNI FMA, in other operations, rebuild 
+TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From 
+C:\Users\davbo\AppData\Local\Programs\Python\Python310\lib\site-packages\keras\src\backend\tensorflow\core.py:232: The 
+name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if 
+CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+inputs [<KerasTensor shape=(None, 280, 80, 1), dtype=float32, sparse=False, ragged=False, name=image>, <KerasTensor shape=(None, None), dtype=int64, sparse=False, ragged=False, name=label>]
+layers ['image', 'Conv1', 'batch_normalization', 'pool1', 'Conv2', 'batch_normalization_1', 'pool2', 'reshape']
+dense2 <Dense name=dense2, built=True>
+pred model ok (None, 70, 58)
